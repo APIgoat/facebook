@@ -24,7 +24,8 @@ class FacebookStrategy extends OpauthStrategy{
 	 * eg. array('scope' => 'email');
 	 */
 	public $defaults = array(
-		'redirect_uri' => '{complete_url_to_strategy}int_callback'
+		'redirect_uri' => _SITE_URL . 'api/v1/oauth/facebook/int_callback',
+		'scope' => 'email'
 	);
 
 	private $api_version = 'v6.0';
